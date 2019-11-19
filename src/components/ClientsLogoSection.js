@@ -52,11 +52,11 @@ const ClientsLogoSections = ({ siteTitle }) => (
 <Carousel class="w-50"> 
 
 <Carousel.Item >
-    <Logo1 class="d-block w-100"/>
+    <Logo1 />
 </Carousel.Item>
 
 <Carousel.Item>
-<Logo2 class="d-block w-100"/>
+<Logo2/>
 </Carousel.Item>
 
 

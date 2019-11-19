@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
 
   <header>
     
-    <logo1/>
+   
     <div class="d-none d-md-block  d-lg-block  d-xl-block d-sm-none">
       <nav class="navbar navbar-light navbar-expand-md  justify-content-center">
 
@@ -24,7 +24,10 @@ const Header = ({ siteTitle }) => (
           </li>
     
           <li class="nav-item pl-5  ">
-          <Logo1/>
+            <div style={{border:'2px solid #3fc5f0' , height:'75px' , width:'220px'}}>
+            <h2 class="text-center pt-2" style={{fontFamily:'italian' ,color:"#3fc5f0"}}>Digital Ninja </h2>
+            </div>
+         
           </li>
            
           <li class="nav-item pl-5  ">
@@ -45,8 +48,9 @@ const Header = ({ siteTitle }) => (
 
 
     <div class=" d-flex d-md-none  d-lg-none  d-xl-none d-sm-block  ">
-    <Navbar collapseOnSelect expand="lg" >
   
+    <Navbar collapseOnSelect expand="lg" >
+   
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="mr-auto">
@@ -62,12 +66,12 @@ const Header = ({ siteTitle }) => (
     </Nav>
   </Navbar.Collapse>
 </Navbar>
-       
+<div style={{border:'2px solid #3fc5f0' , height:'55px' , width:'220px' , marginLeft :'45px' , marginTop:'8px'}}>
+            <h2 class="text-center pt-2" style={{fontFamily:'italian' ,color:"#3fc5f0"}}>Digital Ninja </h2>
+            </div>
     </div>
 
-    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+ 
 
   </header>
 )
