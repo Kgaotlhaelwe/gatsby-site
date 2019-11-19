@@ -1,7 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
+import Logo1  from '../components/Pictures/Logo1'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 const Header = ({ siteTitle }) => (
 
@@ -9,6 +10,7 @@ const Header = ({ siteTitle }) => (
 
   <header>
     
+    <logo1/>
     <div class="d-none d-md-block  d-lg-block  d-xl-block d-sm-none">
       <nav class="navbar navbar-light navbar-expand-md  justify-content-center">
 
@@ -20,10 +22,17 @@ const Header = ({ siteTitle }) => (
             <li class="nav-item pl-5  ">
             <strong><a class="nav-link" href="//codeply.com">Products</a></strong>
           </li>
-
-          <li class="nav-item  pl-5">
+    
+          <li class="nav-item pl-5  ">
+          <Logo1/>
+          </li>
+           
+          <li class="nav-item pl-5  ">
             <strong><a class="nav-link" href="//codeply.com">Blog</a></strong>
           </li>
+
+
+         
 
           <li class="nav-item  pl-5">
             <strong> <a class="nav-link" href="//codeply.com">Contacts</a></strong>
@@ -36,33 +45,29 @@ const Header = ({ siteTitle }) => (
 
 
     <div class=" d-flex d-md-none  d-lg-none  d-xl-none d-sm-block  ">
-    <nav class="navbar navbar-expand-lg navbar-light "> 
-    <button onclock="openAndClose()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-      <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-         </ul>
-      </div>
-    </nav>
+    <Navbar collapseOnSelect expand="lg" >
+  
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
+      <Nav.Link href="#features">Features</Nav.Link>
+      <Nav.Link href="#pricing">Pricing</Nav.Link>
+     
+    </Nav>
+    <Nav>
+      <Nav.Link href="#deets">More deets</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">
+        Dank memes
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+       
     </div>
+
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
   </header>
 )

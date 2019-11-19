@@ -44,8 +44,10 @@ const Layout = ({ children }) => {
       <ClientsLogoSections/>
       < ServicesSection/>
         <main>{children}</main>
-        <footer style={{backgroundColor:""}}>
-         
+        <footer class="mt-5 pt-2" style={{backgroundColor:"#3fc5f0" , height:'50px' , color:'white'}}>
+        <div class="container">
+          <span>All rights reserved</span>
+        </div>
         </footer>
      
     </>
